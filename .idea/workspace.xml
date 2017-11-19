@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="273bef9b-0b24-49f7-a47b-135fe19b24c2" name="Default" comment="" />
+    <list default="true" id="273bef9b-0b24-49f7-a47b-135fe19b24c2" name="Default" comment="Deploy with ApexVCS">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unpackaged/triggers/UpdateTrackCount.trigger" afterPath="$PROJECT_DIR$/unpackaged/triggers/UpdateTrackCount.trigger" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.apex/" />
@@ -17,9 +19,14 @@
       <file leaf-file-name="UpdateTrackCount.trigger" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/unpackaged/triggers/UpdateTrackCount.trigger">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="252">
+              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <folding>
+                <element signature="e#168#177#0" expanded="true" />
+                <element signature="e#218#222#0" expanded="true" />
+                <element signature="e#676#685#0" expanded="true" />
+                <element signature="e#726#730#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -29,6 +36,13 @@
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/unpackaged/triggers/UpdateTrackCount.trigger" />
+      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -64,6 +78,11 @@
             <path>
               <item name="Camilla's Custom Vinyl" type="b2602c69:ProjectViewProjectNode" />
               <item name="Camilla's Custom Vinyl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Camilla's Custom Vinyl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Camilla's Custom Vinyl" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Camilla's Custom Vinyl" type="b2602c69:ProjectViewProjectNode" />
@@ -204,15 +223,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511088525715</updated>
-      <workItem from="1511088530859" duration="74000" />
+      <workItem from="1511088530859" duration="1647000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74000" />
+    <option name="totallyTimeSpent" value="1647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="952" y="0" width="976" height="1038" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -228,7 +248,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51666665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36888888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -252,6 +272,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Deploy with ApexVCS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deploy with ApexVCS" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -259,9 +283,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/unpackaged/triggers/UpdateTrackCount.trigger">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="252">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="e#168#177#0" expanded="true" />
+            <element signature="e#218#222#0" expanded="true" />
+            <element signature="e#676#685#0" expanded="true" />
+            <element signature="e#726#730#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
