@@ -2,20 +2,20 @@
 <module type="salesforce.module" version="4">
   <component name="ComponentSet">
     <type2Names>
-      <SFMetaTypeNamesState type="INSTALLED_PACKAGE" setAll="true" />
-      <SFMetaTypeNamesState type="CUSTOM_TAB" setAll="true" />
-      <SFMetaTypeNamesState type="CUSTOM_OBJECT" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_COMPONENT" setAll="true" />
-      <SFMetaTypeNamesState type="WORKFLOW" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_TRIGGER" setAll="true" />
-      <SFMetaTypeNamesState type="LIGHTNING_BUNDLE" setAll="true" />
-      <SFMetaTypeNamesState type="STATIC_RESOURCE" setAll="true" />
       <SFMetaTypeNamesState type="CUSTOM_APPLICATION" setAll="true" />
-      <SFMetaTypeNamesState type="CUSTOM_LABELS" setAll="true" />
-      <SFMetaTypeNamesState type="FLOW" setAll="true" />
       <SFMetaTypeNamesState type="APEX_CLASS" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_PAGE" setAll="true" />
+      <SFMetaTypeNamesState type="APEX_TRIGGER" setAll="true" />
+      <SFMetaTypeNamesState type="FLOW" setAll="true" />
+      <SFMetaTypeNamesState type="CUSTOM_TAB" setAll="true" />
+      <SFMetaTypeNamesState type="WORKFLOW" setAll="true" />
       <SFMetaTypeNamesState type="LAYOUT" setAll="true" />
+      <SFMetaTypeNamesState type="INSTALLED_PACKAGE" setAll="true" />
+      <SFMetaTypeNamesState type="APEX_PAGE" setAll="true" />
+      <SFMetaTypeNamesState type="LIGHTNING_BUNDLE" setAll="true" />
+      <SFMetaTypeNamesState type="CUSTOM_OBJECT" setAll="true" />
+      <SFMetaTypeNamesState type="STATIC_RESOURCE" setAll="true" />
+      <SFMetaTypeNamesState type="APEX_COMPONENT" setAll="true" />
+      <SFMetaTypeNamesState type="CUSTOM_LABELS" setAll="true" />
     </type2Names>
     <components>
       <SFMetaComponentState type="ApexClass" chosen="true" isMajor="true" />

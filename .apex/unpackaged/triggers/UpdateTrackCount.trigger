@@ -1,29 +1,41 @@
 trigger UpdateTrackCount on Track__c (before insert, after update,  after delete, after undelete) {
-    if (Trigger.isInsert) {
-        List <Song__c> songs = new List <Song__c> ();
-        List <Id> songId = new List <Id>();
+    if (   Trigger.isInsert || Trigger.isUndelete) {
+        Set <Id> updatedSongId = new Set <Id>();
+        List <Song__c> updatedSong = new List<Song__c>();
+        Map <Id, Song__c> songs = new Map  <Id, Song__c> ([SELECT id, Track_Count__c, Track_Licenses__c FROM Song__c ]);    
         for (Track__c track : Trigger.New) {
-            songId.add(track.Song__c);
-        }
-        for (Song__c song : [Select id,Track_Count__c,Track_Licenses__c FROM Song__c WHERE Id in :songId]) {
-            if (song.Track_Count__c == song.Track_Licenses__c) {
+            Song__c currentSong =  songs.get(track.Song__c);
+            if (currentSong.Track_Count__c == currentSong.Track_Licenses__c) {
+                track.addError('You exeeded the limits of using that song.');
             }
-            song.Track_Count__c++;
-            songs.add(song);
+            else {
+                currentSong.Track_Count__c++;  
+        	    updatedSongId.add(currentSong.Id);
+            }           
         }
-        update songs;
+        for (Id i:  updatedSongId) {
+        	updatedSong.add(songs.get(i));		   
+        }
+        update updatedSong;
+        
     }
-    if(Trigger.isDelete){
-        List <Song__c> songs = new List <Song__c> ();
-        List <Id> songId = new List <Id>();
+    if(Trigger.isDelete) {
+        Set <Id> updatedSongId = new Set <Id>();
+        List <Song__c> updatedSong = new List<Song__c>();
+        Map <Id, Song__c> songs = new Map  <Id, Song__c> ([SELECT id, Track_Count__c, Track_Licenses__c FROM Song__c ]);    
         for (Track__c track : Trigger.Old) {
-            songId.add(track.Song__c);
+            Song__c currentSong =  songs.get(track.Song__c);
+            currentSong.Track_Count__c--;
+            updatedSongId.add(currentSong.Id);
         }
-        for (Song__c song : [Select id,Track_Count__c,Track_Licenses__c FROM Song__c WHERE Id in :songId]) {
-            song.Track_Count__c--;
-            songs.add(song);
+        for (Id i:  updatedSongId) {
+        	updatedSong.add(songs.get(i));		   
         }
-        update songs;
+        update updatedSong;
+        
     }
-
+   if(Trigger.isUpdate) {
+       
+       
+    }
 }
