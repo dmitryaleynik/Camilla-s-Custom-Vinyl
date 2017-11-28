@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="salesforce.module" version="4">
-  <component name="ComponentSet">
+  <component name="ComponentSet" standardSObjects="false">
     <type2Names>
-      <SFMetaTypeNamesState type="CUSTOM_APPLICATION" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_CLASS" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_TRIGGER" setAll="true" />
-      <SFMetaTypeNamesState type="FLOW" setAll="true" />
-      <SFMetaTypeNamesState type="CUSTOM_TAB" setAll="true" />
-      <SFMetaTypeNamesState type="WORKFLOW" setAll="true" />
-      <SFMetaTypeNamesState type="LAYOUT" setAll="true" />
-      <SFMetaTypeNamesState type="INSTALLED_PACKAGE" setAll="true" />
+      <SFMetaTypeNamesState type="APPROVAL_PROCESS" setAll="true" />
       <SFMetaTypeNamesState type="APEX_PAGE" setAll="true" />
+      <SFMetaTypeNamesState type="APEX_CLASS" setAll="true" />
       <SFMetaTypeNamesState type="LIGHTNING_BUNDLE" setAll="true" />
-      <SFMetaTypeNamesState type="CUSTOM_OBJECT" setAll="true" />
-      <SFMetaTypeNamesState type="STATIC_RESOURCE" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_COMPONENT" setAll="true" />
+      <SFMetaTypeNamesState type="CUSTOM_TAB" setAll="true" />
+      <SFMetaTypeNamesState type="ASSIGNMENT_RULES" setAll="true" />
       <SFMetaTypeNamesState type="CUSTOM_LABELS" setAll="true" />
+      <SFMetaTypeNamesState type="CUSTOM_APPLICATION" setAll="true" />
+      <SFMetaTypeNamesState type="STATIC_RESOURCE" setAll="true" />
+      <SFMetaTypeNamesState type="FLOW" setAll="true" />
+      <SFMetaTypeNamesState type="APEX_TRIGGER" setAll="true" />
+      <SFMetaTypeNamesState type="APEX_TEST_SUITE" setAll="true" />
+      <SFMetaTypeNamesState type="COMMUNITY" setAll="true" />
+      <SFMetaTypeNamesState type="WORKFLOW" setAll="true" />
+      <SFMetaTypeNamesState type="COMMUNITY_TEMPLATE_DEFINITION" setAll="true" />
+      <SFMetaTypeNamesState type="INSTALLED_PACKAGE" setAll="true" />
+      <SFMetaTypeNamesState type="CUSTOM_OBJECT" setAll="true" />
+      <SFMetaTypeNamesState type="APEX_COMPONENT" setAll="true" />
+      <SFMetaTypeNamesState type="CALL_CENTER" setAll="true" />
+      <SFMetaTypeNamesState type="LAYOUT" setAll="true" />
     </type2Names>
     <components>
       <SFMetaComponentState type="ApexClass" chosen="true" isMajor="true" />
@@ -32,12 +38,12 @@
       <SFMetaComponentState type="Layout" chosen="true" isMajor="true" />
       <SFMetaComponentState type="StaticResource" chosen="true" isMajor="true" />
       <SFMetaComponentState type="Workflow" chosen="true" isMajor="true" />
-      <SFMetaComponentState type="ApexTestSuite" />
-      <SFMetaComponentState type="ApprovalProcess" />
-      <SFMetaComponentState type="AssignmentRules" />
-      <SFMetaComponentState type="CallCenter" />
-      <SFMetaComponentState type="Community" />
-      <SFMetaComponentState type="CommunityTemplateDefinition" />
+      <SFMetaComponentState type="ApexTestSuite" chosen="true" />
+      <SFMetaComponentState type="ApprovalProcess" chosen="true" />
+      <SFMetaComponentState type="AssignmentRules" chosen="true" />
+      <SFMetaComponentState type="CallCenter" chosen="true" />
+      <SFMetaComponentState type="Community" chosen="true" />
+      <SFMetaComponentState type="CommunityTemplateDefinition" chosen="true" />
       <SFMetaComponentState type="CommunityThemeDefinition" />
       <SFMetaComponentState type="CustomMetadata" />
       <SFMetaComponentState type="CustomObjectTranslation" />

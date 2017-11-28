@@ -1,0 +1,17 @@
+<apex:page controller="MixBuilderController" >
+    <apex:form >
+        <apex:pageBlock title="Mix Builder">
+        	<apex:pageBlockSection title="Mix Details">
+        	</apex:pageBlockSection>
+        	<apex:pageBlockSection title="Mix Summary">
+        	</apex:pageBlockSection>
+            <apex:pageBlockSection title="Songs">
+                <apex:pageBlockTable value="{!Songs}" var="song">
+                    <apex:column value="{!song.Name}" />
+                    <apex:column value="{!song.Length_m__c}"/>
+                    <apex:column value="{!song.Genre__c}"/>
+                </apex:pageBlockTable>
+        	</apex:pageBlockSection>
+        </apex:pageBlock>   
+    </apex:form>
+</apex:page>
