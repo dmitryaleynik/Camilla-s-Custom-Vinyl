@@ -6,8 +6,9 @@ public class MixHandler implements  TriggerTemplate.Handler
     private List<Mix__c> newValues;
     private List<Mix__c> oldValues;
     private Map<Id, Mix__c> oldMap;
+    private Map<Id, Mix__c> newMap;
 
-    public  void setValues (List<sObject> newValues, List<sObject> oldValues, Map<Id,sObject> oldMap)
+    public  void setValues (List<sObject> newValues, List<sObject> oldValues, Map<Id,sObject> newMap ,Map<Id,sObject> oldMap)
     {
         this.newValues = newValues;
         this.oldValues = oldValues;
@@ -16,22 +17,22 @@ public class MixHandler implements  TriggerTemplate.Handler
     
     public void handle (TriggerTemplate.TriggerAction action) 
     {
-        if (action == TriggerTemplate.TriggerAction.afterUpdate)
+        if (action == TriggerTemplate.TriggerAction.afterDelete)
         {
-            //MixService.setPrimaryAndSecondaryGenre(newValues);
-        }
-
-        if (action == TriggerTemplate.TriggerAction.afterInsert)
-        {
-            //MixService.setPrimaryAndSecondaryGenre(newValues);
-        }
-        if (action == TriggerTemplate.TriggerAction.beforeDelete)
-        {
-			MixService.updSongBeforeMixDel(oldValues);
+            List<Track__c> relatedTracks = TrackService.getRelatedTrack(oldValues);
+			Map<Id,Track__c> relatedTracksMap = new Map<Id, Track__c>(relatedTracks);
+			Set <Id> songIds = Utils.getParentIds(relatedTracks, 'Song__c');
+			Map<Id,Song__c> relatedSongs = SongService.getRelatedSongs(songIDs);
+			SongService.recalculateTrCount(relatedSongs, relatedTracksMap);
         }
         if (action == TriggerTemplate.TriggerAction.afterUndelete)
         {
-			MixService.updSongAfterUndel(newValues);
+			List<Track__c> relatedTracks = TrackService.getRelatedTrack(newValues);
+			Map<Id,Track__c> relatedTracksMap = new Map<Id, Track__c>(relatedTracks);
+			Set <Id> songIds = Utils.getParentIds(relatedTracks, 'Song__c');
+			Map<Id,Song__c> relatedSongs = SongService.getRelatedSongs(songIDs);
+			SongService.recalculateTrCount(relatedSongs, relatedTracksMap);
+
         }
     }
 }

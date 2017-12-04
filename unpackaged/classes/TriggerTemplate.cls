@@ -11,7 +11,7 @@ global without sharing class TriggerTemplate
 
 		void handle(TriggerTemplate.TriggerAction theAction);
 
-		void setValues(List<sObject> theNewValues, List<sObject> oldValues, Map<Id, sObject> theOldMap);
+		void setValues(List<sObject> newValues, List<sObject> oldValues, Map<Id, sObject> newMap ,Map<Id, sObject> oldMap);
 
 	}
 
@@ -75,7 +75,7 @@ global without sharing class TriggerTemplate
 				{
 					for (Handler aHandler : aHandlers)
 						{
-							aHandler.setValues(Trigger.new, Trigger.Old, Trigger.oldMap);
+							aHandler.setValues(Trigger.new, Trigger.Old, Trigger.newMap, Trigger.oldMap);
 							aHandler.handle(theAction);
 						}
 				}

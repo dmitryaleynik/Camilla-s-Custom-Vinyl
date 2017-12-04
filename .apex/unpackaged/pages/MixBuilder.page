@@ -1,7 +1,8 @@
 <apex:page controller="MixBuilderController" >
     <apex:form >
-        <apex:pageBlock title="Mix Builder">
-        	<apex:pageBlockSection title="Mix Details">
+        Mix Builder
+        <apex:pageBlock title="">         
+        	<apex:pageBlockSection title="Mix Details">  
         	</apex:pageBlockSection>
         	<apex:pageBlockSection title="Mix Summary">
         	</apex:pageBlockSection>

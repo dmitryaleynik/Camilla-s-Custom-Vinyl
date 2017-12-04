@@ -3,28 +3,41 @@
  */
 public class SongService
 {
-    public static Map<Id, Song__c> getAppropriateSongs(List<Track__c> tracks)
-    {
-        Set <Id> usedSongId = new Set <Id>();
-        for (Track__c track : tracks)
-        {
-            usedSongId.add(track.Song__c);
-        }
-        Map <Id, Song__c> appropriateSongs = new Map <Id, Song__c> (
-                [SELECT id, Track_Count__c, Track_Licenses__c,Genre__c FROM Song__c WHERE Id in :usedSongId ]);
-        return appropriateSongs;
-    }
-    
-	public static List<Song__c> getRelatedSongs(List<Track__c> tracks)
+	public static void recalculateTrCount (Map<Id,Song__c> mapSong, Map<Id, Track__c> newMap)
 		{
-			Set <Id> usedSongId = new Set <Id>();
-			for (Track__c track : tracks)
-            {
-					usedSongId.add(track.Song__c);
-			}
-			return[
-				SELECT id, Track_Count__c, Track_Licenses__c, Genre__c, Name, Length_m__c
-				FROM Song__c
-				WHERE Id in :usedSongId ];
+			for (Song__c song : mapSong.values())
+				{
+					Integer trackCount = song.Tracks__r.size();
+					Integer trackLicence = (Integer)song.Track_Licenses__c;
+					if(trackCount > trackLicence)
+					{
+						for (Track__c track : song.Tracks__r )
+							{
+								Track__c  triggerContextTrack = newMap.get(track.Id);
+								if ( triggerContextTrack != null)
+								{
+									triggerContextTrack.addError('You exeeded the limits of using that song.');
+								}
+							}
+					} else
+					{
+						song.Track_Count__c = trackCount;
+					}
+				}
+			update mapSong.values();
 		}
+
+	public static Map<Id, Song__c> getRelatedSongs(Set<Id> relatedSongsID)
+	{
+		Map<Id,Song__c> relatedSongs = new Map <Id,Song__c> ([SELECT name,Genre__c, Track_Count__c, Track_Licenses__c,
+				(SELECT  Name,Song__c
+						FROM  Tracks__r)
+				FROM  Song__c
+				WHERE Id in : relatedSongsID]);
+		return relatedSongs;
+
+
+	}
+
+
 }
