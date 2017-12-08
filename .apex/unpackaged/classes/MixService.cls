@@ -5,7 +5,6 @@ public class MixService
 {
     public static void setGenre(Map<Id, Mix__c> mapMix )
     {
-
         for (Mix__c mix : mapMix.values())
         {
             mix.Secondary_Genre__c = null;
@@ -47,11 +46,39 @@ public class MixService
         }
         update mapMix.values();
     }
-    public static Map<Id, Mix__c> getRelatedMixes (Set <Id> mixIds ){
-		Map <Id, Mix__c> mapMix = new Map<Id, Mix__c>([SELECT  Name, Primary_Genre__c, Secondary_Genre__c
-				FROM  Mix__c
-				WHERE id in :mixIds]);
-		return  mapMix;
+    public static Map<Id, Mix__c> getRelatedMixes (Set <Id> mixIds )
+    {
+        Map <Id, Mix__c> mapMix = new Map<Id, Mix__c>([SELECT  Name, Primary_Genre__c, Secondary_Genre__c
+                FROM  Mix__c
+                WHERE id in :mixIds]);
+        return  mapMix;
+    }
+    public static Integer  getNumOfTracks(Id mixID){
+		AggregateResult aggregateResult = [SELECT Mix__c, COUNT(id) number
+				FROM Track__c
+				WHERE  Mix__c = :mixId
+		GROUP BY Mix__c
+		LIMIT 1];
+		Integer result = (Integer)aggregateResult.get('number');
+		return result;
+	}
+	public static Double getLengthOfMix(Id mixID ){
+		AggregateResult  aggregateResults = [SELECT Mix__c, SUM(Song__r.Length_m__c) sum
+				FROM Track__c
+				WHERE Mix__c = :mixID
+		GROUP BY Mix__c
+		LIMIT 1];
+		Double result = (Double)aggregateResults.get('sum');
+		return result;
+	}
+	public static Mix__c getMixById (Id mixID){
+		Mix__c mix = [SELECT Name,Primary_Genre__c,Secondary_Genre__c, Customer__c,
+				            ( SELECT name,Song__c
+						    FROM Tracks__r)
+				      FROM Mix__c
+				      Where Id = :mixId
+		              Limit 1];
+		return mix;
 	}
 
 }

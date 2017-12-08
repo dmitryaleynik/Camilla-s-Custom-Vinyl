@@ -27,7 +27,7 @@ public class SongService
 			update mapSong.values();
 		}
 
-	public static Map<Id, Song__c> getRelatedSongs(Set<Id> relatedSongsID)
+	public static Map<Id, Song__c> getRelatedSongs (Set<Id> relatedSongsID)
 	{
 		Map<Id,Song__c> relatedSongs = new Map <Id,Song__c> ([SELECT name,Genre__c, Track_Count__c, Track_Licenses__c,
 				(SELECT  Name,Song__c
@@ -35,9 +35,28 @@ public class SongService
 				FROM  Song__c
 				WHERE Id in : relatedSongsID]);
 		return relatedSongs;
-
-
 	}
+	public static Set<Id> getUsedSongId (Id mixId){
+		Set<Id> songId = new Set<Id>();
+		List <Track__c> usedTrack = [SELECT Mix__c, Song__r.Id
+		                             FROM Track__c
+		                             where Mix__c = :mixID];
+		for (Track__c track : usedTrack){
+			songId.add(track.Song__r.Id);
+		}
+		return  songID;
+	}
+	public static Double getLengthOfSongs(Set<Id> songId){
+		if (songId.size() == 0){
+			return 0;
+		}
+		AggregateResult aggregateResult = [SELECT  SUM(Length_m__c) sum
+		                                   FROM Song__c
+		                                   WHERE Id in :songId];
+		Double result = (Double) aggregateResult.get('sum');
+		return result;
+	}
+
 
 
 }

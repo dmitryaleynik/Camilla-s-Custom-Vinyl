@@ -1,18 +1,50 @@
-<apex:page controller="MixBuilderController" >
+<apex:page controller="MixBuilderController"  >
+    <apex:sectionHeader title="Mix Builder" subtitle="{!mix.Name}"/>
     <apex:form >
-        Mix Builder
-        <apex:pageBlock title="">         
-        	<apex:pageBlockSection title="Mix Details">  
-        	</apex:pageBlockSection>
-        	<apex:pageBlockSection title="Mix Summary">
-        	</apex:pageBlockSection>
+        <apex:pageBlock title="">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="save" />
+                <apex:commandButton value="cancel" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Mix Details">
+                <apex:inputField value="{!mix.Name}"/>
+                <apex:inputField value="{!mix.Customer__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Mix Summary" id="mixSum">
+                Track Count
+                <apex:outputText id="mixTrackCount" value="{!mixTrackCount}"/>
+                Mix Length
+                <apex:outputText value="{!mixLength}"/>
+                Remaining Tracks
+                <apex:outputText value="{!remMixTracks}"/>
+                Remaining Mix Length (m)
+                <apex:outputText value="{!remMixLength}"/>
+            </apex:pageBlockSection>
             <apex:pageBlockSection title="Songs">
-                <apex:pageBlockTable value="{!Songs}" var="song">
-                    <apex:column value="{!song.Name}" />
-                    <apex:column value="{!song.Length_m__c}"/>
-                    <apex:column value="{!song.Genre__c}"/>
+                Song genre filter
+                <apex:selectList value="{!filter}" size="1" title="Song genre filter">
+                    <apex:selectOptions value="{!Items}" />
+                    <apex:actionSupport event="onchange" action="{!updateTable}" rerender="table" />
+                </apex:selectList>
+               <apex:actionStatus id = "mixSumStat" startText = "Prosessing of the data"/>
+                 <apex:pageBlockTable id="table" value="{!wrapper}" var="wr"  >
+                     <apex:column >
+                         <apex:inputCheckbox value="{!wr.isSelected}" id="checkBox" >
+                             <apex:actionSupport event="onchange" action="{!changeUsedSongs}"
+                                                 rerender="mixSum" status="mixSumStat" >
+                                 <apex:param name="Id"  value="{!wr.song.Id}" assignTo="{!clickedSongId}" />
+                             </apex:actionSupport>
+                         </apex:inputCheckbox>
+                     </apex:column>
+                     <apex:column >
+                         <apex:outputLink value="https://ap5.salesforce.com/{!wr.song.Id}" >
+                             {!wr.song.Name}
+                         </apex:outputLink>
+                     </apex:column>
+                     <apex:column value="{!wr.song.Length_m__c}"/>
+                     <apex:column value="{!wr.song.Genre__c}"/>
                 </apex:pageBlockTable>
-        	</apex:pageBlockSection>
-        </apex:pageBlock>   
+            </apex:pageBlockSection>
+        </apex:pageBlock>
     </apex:form>
 </apex:page>

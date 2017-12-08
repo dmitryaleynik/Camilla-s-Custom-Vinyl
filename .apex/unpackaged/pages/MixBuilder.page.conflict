@@ -26,7 +26,7 @@
                     <apex:selectOptions value="{!Items}" />
                     <apex:actionSupport event="onchange" action="{!updateTable}" rerender="table" />
                 </apex:selectList>
-               <apex:actionStatus id = "mixSumStat" startText = "Prosessing of the data"/>
+               <apex:actionStatus id="mixSumStat" startText="Prosessing of the data" stopText="Done"/>
                  <apex:pageBlockTable id="table" value="{!wrapper}" var="wr"  >
                      <apex:column >
                          <apex:inputCheckbox value="{!wr.isSelected}" id="checkBox" >

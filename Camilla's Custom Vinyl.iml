@@ -2,13 +2,13 @@
 <module type="salesforce.module" version="4">
   <component name="ComponentSet" allManaged="false">
     <type2Names>
-      <SFMetaTypeNamesState type="APEX_CLASS" setAll="true" />
-      <SFMetaTypeNamesState type="CUSTOM_TAB" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_COMPONENT" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_TRIGGER" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_PAGE" setAll="true" />
-      <SFMetaTypeNamesState type="CUSTOM_OBJECT" setAll="true" />
       <SFMetaTypeNamesState type="LAYOUT" setAll="true" />
+      <SFMetaTypeNamesState type="APEX_COMPONENT" setAll="true" />
+      <SFMetaTypeNamesState type="APEX_PAGE" setAll="true" />
+      <SFMetaTypeNamesState type="CUSTOM_TAB" setAll="true" />
+      <SFMetaTypeNamesState type="APEX_CLASS" setAll="true" />
+      <SFMetaTypeNamesState type="CUSTOM_OBJECT" setAll="true" />
+      <SFMetaTypeNamesState type="APEX_TRIGGER" setAll="true" />
     </type2Names>
     <components>
       <SFMetaComponentState type="ApexClass" chosen="true" isMajor="true" />

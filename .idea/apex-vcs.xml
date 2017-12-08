@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ApexVcsIndex">
     <index-record>
-      <option name="path" value="/unpackaged/classes/TrackService.cls-meta.xml" />
-      <option name="type" value="DELETED" />
-    </index-record>
-    <index-record>
       <option name="path" value="/unpackaged/classes/Main.cls-meta.xml" />
       <option name="type" value="DELETED" />
     </index-record>
     <index-record>
-      <option name="path" value="/unpackaged/classes/AccountHandler.cls" />
+      <option name="path" value="/unpackaged/classes/MixBuilderController.cls-meta.xml" />
       <option name="type" value="DELETED" />
     </index-record>
     <index-record>
-      <option name="path" value="/unpackaged/classes/AccountHandler.cls-meta.xml" />
+      <option name="path" value="/unpackaged/classes/TrackService.cls-meta.xml" />
       <option name="type" value="DELETED" />
     </index-record>
   </component>
