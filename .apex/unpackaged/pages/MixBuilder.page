@@ -1,9 +1,10 @@
 <apex:page controller="MixBuilderController"  >
+    <apex:stylesheet value="{!URLFOR($Resource.style, 'style.css')}"/>
     <apex:sectionHeader title="Mix Builder" subtitle="{!mix.Name}"/>
     <apex:form >
         <apex:pageBlock title="">
             <apex:pageBlockButtons >
-                <apex:commandButton value="save" />
+                <apex:commandButton value="save" action="{!save}"/>
                 <apex:commandButton value="cancel" />
             </apex:pageBlockButtons>
             <apex:pageBlockSection title="Mix Details">
@@ -20,14 +21,14 @@
                 Remaining Mix Length (m)
                 <apex:outputText value="{!remMixLength}"/>
             </apex:pageBlockSection>
-            <apex:pageBlockSection title="Songs">
-                Song genre filter
-                <apex:selectList value="{!filter}" size="1" title="Song genre filter">
+            <apex:pageBlockSection title="Songs" columns="1">
+                <span>Song genre filter</span>
+                <apex:selectList value="{!filter}" size="1" title="Song genre filter" >
                     <apex:selectOptions value="{!Items}" />
-                    <apex:actionSupport event="onchange" action="{!updateTable}" rerender="table" />
+                    <apex:actionSupport event="onchange" action="{!updateTable}"  rerender="table" />
                 </apex:selectList>
-               <apex:actionStatus id = "mixSumStat" startText = "Prosessing of the data"/>
-                 <apex:pageBlockTable id="table" value="{!wrapper}" var="wr"  >
+               <apex:actionStatus id="mixSumStat" startText="Processing of the data"/>
+                 <apex:pageBlockTable id="table" value="{!wrapper}" var="wr" width="100%"  >
                      <apex:column >
                          <apex:inputCheckbox value="{!wr.isSelected}" id="checkBox" >
                              <apex:actionSupport event="onchange" action="{!changeUsedSongs}"
@@ -44,6 +45,13 @@
                      <apex:column value="{!wr.song.Length_m__c}"/>
                      <apex:column value="{!wr.song.Genre__c}"/>
                 </apex:pageBlockTable>
+                <apex:outputPanel style="text-align:center;" layout="block">
+                    <apex:commandButton value="Previous" action="{!previous}" />
+                    <apex:commandButton value="Next"  action="{!next}"  />
+                    <apex:commandButton value="First" action="{!first}" />
+                    <apex:commandButton value="Last" action="{!last}" />
+                </apex:outputPanel>
+
             </apex:pageBlockSection>
         </apex:pageBlock>
     </apex:form>

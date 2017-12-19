@@ -2,18 +2,120 @@
 <module type="salesforce.module" version="4">
   <component name="ComponentSet" allManaged="false">
     <type2Names>
-      <SFMetaTypeNamesState type="LAYOUT" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_COMPONENT" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_PAGE" setAll="true" />
-      <SFMetaTypeNamesState type="CUSTOM_TAB" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_CLASS" setAll="true" />
-      <SFMetaTypeNamesState type="CUSTOM_OBJECT" setAll="true" />
-      <SFMetaTypeNamesState type="APEX_TRIGGER" setAll="true" />
+      <SFMetaTypeNamesState type="CUSTOM_OBJECT" setAll="true">
+        <option name="myNames">
+          <set>
+            <option value="Account" />
+            <option value="AccountCleanInfo" />
+            <option value="AccountContactRole" />
+            <option value="Activity" />
+            <option value="Asset" />
+            <option value="AssetRelationship" />
+            <option value="AssistantProgress" />
+            <option value="Campaign" />
+            <option value="CampaignMember" />
+            <option value="Case" />
+            <option value="CaseContactRole" />
+            <option value="Contact" />
+            <option value="ContactCleanInfo" />
+            <option value="ContentVersion" />
+            <option value="Contract" />
+            <option value="ContractContactRole" />
+            <option value="DandBCompany" />
+            <option value="DuplicateRecordItem" />
+            <option value="DuplicateRecordSet" />
+            <option value="EmailMessage" />
+            <option value="Event" />
+            <option value="ExchangeUserMapping" />
+            <option value="FeedItem" />
+            <option value="ForecastingCategoryMapping" />
+            <option value="Idea" />
+            <option value="Lead" />
+            <option value="LeadCleanInfo" />
+            <option value="Macro" />
+            <option value="MacroAction" />
+            <option value="MacroInstruction" />
+            <option value="Mix__c" />
+            <option value="Opportunity" />
+            <option value="OpportunityCompetitor" />
+            <option value="OpportunityContactRole" />
+            <option value="OpportunityLineItem" />
+            <option value="Order" />
+            <option value="OrderItem" />
+            <option value="Order__c" />
+            <option value="PartnerRole" />
+            <option value="Pricebook2" />
+            <option value="PricebookEntry" />
+            <option value="Product2" />
+            <option value="Scorecard" />
+            <option value="ScorecardMetric" />
+            <option value="Site" />
+            <option value="SocialPersona" />
+            <option value="Solution" />
+            <option value="Song__c" />
+            <option value="StreamingChannel" />
+            <option value="Task" />
+            <option value="Track__c" />
+            <option value="User" />
+            <option value="UserProvisioningRequest" />
+          </set>
+        </option>
+      </SFMetaTypeNamesState>
+      <SFMetaTypeNamesState type="APEX_TRIGGER" setAll="true">
+        <option name="myNames">
+          <set>
+            <option value="MixTrigger" />
+            <option value="OrderTrigger" />
+            <option value="TrackTrigger" />
+            <option value="UpdateTrackCount" />
+          </set>
+        </option>
+      </SFMetaTypeNamesState>
+      <SFMetaTypeNamesState type="APEX_CLASS" setAll="true">
+        <option name="myNames">
+          <set>
+            <option value="AccountService" />
+            <option value="AccountWrapper" />
+            <option value="AssignNewOwner" />
+            <option value="Main" />
+            <option value="MixBuilderController" />
+            <option value="MixHandler" />
+            <option value="MixService" />
+            <option value="OrderHandler" />
+            <option value="OrderService" />
+            <option value="RestAccountController" />
+            <option value="SongService" />
+            <option value="TaskService" />
+            <option value="TrackHandler" />
+            <option value="TrackService" />
+            <option value="TriggerTemplate" />
+            <option value="Utils" />
+          </set>
+        </option>
+      </SFMetaTypeNamesState>
+      <SFMetaTypeNamesState type="STATIC_RESOURCE" setAll="true">
+        <option name="myNames">
+          <set>
+            <option value="VinylLogo" />
+            <option value="style" />
+          </set>
+        </option>
+      </SFMetaTypeNamesState>
+      <SFMetaTypeNamesState type="CUSTOM_TAB" setAll="true">
+        <option name="myNames">
+          <set>
+            <option value="Mix__c" />
+            <option value="Order__c" />
+            <option value="Song__c" />
+            <option value="Track__c" />
+          </set>
+        </option>
+      </SFMetaTypeNamesState>
     </type2Names>
     <components>
       <SFMetaComponentState type="ApexClass" chosen="true" isMajor="true" />
-      <SFMetaComponentState type="ApexComponent" chosen="true" isMajor="true" />
-      <SFMetaComponentState type="ApexPage" chosen="true" isMajor="true" />
+      <SFMetaComponentState type="ApexComponent" isMajor="true" />
+      <SFMetaComponentState type="ApexPage" isMajor="true" />
       <SFMetaComponentState type="ApexTrigger" chosen="true" isMajor="true" />
       <SFMetaComponentState type="AuraDefinitionBundle" isMajor="true" />
       <SFMetaComponentState type="CustomApplication" isMajor="true" />
@@ -22,8 +124,8 @@
       <SFMetaComponentState type="CustomTab" chosen="true" isMajor="true" />
       <SFMetaComponentState type="Flow" isMajor="true" />
       <SFMetaComponentState type="InstalledPackage" isMajor="true" />
-      <SFMetaComponentState type="Layout" chosen="true" isMajor="true" />
-      <SFMetaComponentState type="StaticResource" isMajor="true" />
+      <SFMetaComponentState type="Layout" isMajor="true" />
+      <SFMetaComponentState type="StaticResource" chosen="true" isMajor="true" />
       <SFMetaComponentState type="Workflow" isMajor="true" />
       <SFMetaComponentState type="ApexTestSuite" />
       <SFMetaComponentState type="ApprovalProcess" />
