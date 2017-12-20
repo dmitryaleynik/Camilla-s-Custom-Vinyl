@@ -43,9 +43,6 @@ public class MixBuilderController
 
 }
 
-
-
-
     public MixBuilderController ()
     {
         mixID = ApexPages.currentPage().getParameters().get('Id');
