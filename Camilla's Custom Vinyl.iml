@@ -2,6 +2,46 @@
 <module type="salesforce.module" version="4">
   <component name="ComponentSet" allManaged="false">
     <type2Names>
+      <SFMetaTypeNamesState type="APEX_CLASS" setAll="true">
+        <option name="myNames">
+          <set>
+            <option value="AccountService" />
+            <option value="AccountWrapper" />
+            <option value="AssignNewOwner" />
+            <option value="Main" />
+            <option value="MixBuilderController" />
+            <option value="MixHandler" />
+            <option value="MixService" />
+            <option value="OrderHandler" />
+            <option value="OrderService" />
+            <option value="RestAccountController" />
+            <option value="SongService" />
+            <option value="TaskService" />
+            <option value="TrackHandler" />
+            <option value="TrackService" />
+            <option value="TriggerTemplate" />
+            <option value="Utils" />
+          </set>
+        </option>
+      </SFMetaTypeNamesState>
+      <SFMetaTypeNamesState type="CUSTOM_TAB" setAll="true">
+        <option name="myNames">
+          <set>
+            <option value="Mix__c" />
+            <option value="Order__c" />
+            <option value="Song__c" />
+            <option value="Track__c" />
+          </set>
+        </option>
+      </SFMetaTypeNamesState>
+      <SFMetaTypeNamesState type="STATIC_RESOURCE" setAll="true">
+        <option name="myNames">
+          <set>
+            <option value="VinylLogo" />
+            <option value="style" />
+          </set>
+        </option>
+      </SFMetaTypeNamesState>
       <SFMetaTypeNamesState type="CUSTOM_OBJECT" setAll="true">
         <option name="myNames">
           <set>
@@ -68,46 +108,6 @@
             <option value="OrderTrigger" />
             <option value="TrackTrigger" />
             <option value="UpdateTrackCount" />
-          </set>
-        </option>
-      </SFMetaTypeNamesState>
-      <SFMetaTypeNamesState type="APEX_CLASS" setAll="true">
-        <option name="myNames">
-          <set>
-            <option value="AccountService" />
-            <option value="AccountWrapper" />
-            <option value="AssignNewOwner" />
-            <option value="Main" />
-            <option value="MixBuilderController" />
-            <option value="MixHandler" />
-            <option value="MixService" />
-            <option value="OrderHandler" />
-            <option value="OrderService" />
-            <option value="RestAccountController" />
-            <option value="SongService" />
-            <option value="TaskService" />
-            <option value="TrackHandler" />
-            <option value="TrackService" />
-            <option value="TriggerTemplate" />
-            <option value="Utils" />
-          </set>
-        </option>
-      </SFMetaTypeNamesState>
-      <SFMetaTypeNamesState type="STATIC_RESOURCE" setAll="true">
-        <option name="myNames">
-          <set>
-            <option value="VinylLogo" />
-            <option value="style" />
-          </set>
-        </option>
-      </SFMetaTypeNamesState>
-      <SFMetaTypeNamesState type="CUSTOM_TAB" setAll="true">
-        <option name="myNames">
-          <set>
-            <option value="Mix__c" />
-            <option value="Order__c" />
-            <option value="Song__c" />
-            <option value="Track__c" />
           </set>
         </option>
       </SFMetaTypeNamesState>

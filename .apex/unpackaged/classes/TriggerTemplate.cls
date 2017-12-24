@@ -6,6 +6,7 @@ global without sharing class TriggerTemplate
 			afterUpdate, beforeDelete, beforeInsert, beforeUpdate
 	}
 
+
 	public interface Handler
 	{
 

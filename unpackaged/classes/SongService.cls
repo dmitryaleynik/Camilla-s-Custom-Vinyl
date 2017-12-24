@@ -16,6 +16,7 @@ public class SongService
 								Track__c  triggerContextTrack = newMap.get(track.Id);
 								if ( triggerContextTrack != null)
 								{
+									System.debug('Errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrror');
 									triggerContextTrack.addError('You exeeded the limits of using that song.');
 								}
 							}

@@ -54,7 +54,6 @@ public class MixBuilderController
 
         if (mixID == null)
         {
-            mix = new Mix__c();
             updateTable();
         }else
         {
@@ -136,6 +135,9 @@ public class MixBuilderController
     {
 		Savepoint sp = Database.setSavepoint();
 		try {
+			if( mixID == null){
+				mix = new Mix__c();
+			}
 			upsert  mix;
 			List<Track__c> tracksToAdd = new List<Track__c>();
 			Integer i =0;

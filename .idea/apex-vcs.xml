@@ -6,20 +6,20 @@
       <option name="type" value="DELETED" />
     </index-record>
     <index-record>
-      <option name="path" value="/unpackaged/classes/TriggerTemplate.cls" />
-      <option name="type" value="MODIFIED" />
-    </index-record>
-    <index-record>
-      <option name="path" value="/unpackaged/classes/MixBuilderController.cls" />
-      <option name="type" value="MODIFIED" />
-    </index-record>
-    <index-record>
       <option name="path" value="/unpackaged/classes/TrackService.cls-meta.xml" />
       <option name="type" value="DELETED" />
     </index-record>
     <index-record>
       <option name="path" value="/unpackaged/classes/Main.cls-meta.xml" />
       <option name="type" value="DELETED" />
+    </index-record>
+    <index-record>
+      <option name="path" value="/unpackaged/classes/MixExceptions.cls" />
+      <option name="type" value="NEW" />
+    </index-record>
+    <index-record>
+      <option name="path" value="/unpackaged/classes/MixExceptions.cls-meta.xml" />
+      <option name="type" value="NEW" />
     </index-record>
   </component>
 </project>
